@@ -24,12 +24,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 32px;
+  padding: 10px 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar .bsafe-logo {
-  height: 40px;        
+  height: 60px;        
   width: auto;
   margin: 0;
   border-radius: 6px;
