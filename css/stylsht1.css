@@ -50,6 +50,47 @@ body {
   color: var(--navtext-hover);
 }
 
+.bsafe-logo {
+  max-width: 300px;
+  width: 100%;
+  display: block;
+  margin: 40px auto;
+  border-radius: 12px;
+}
+
+.hero {
+  width: 100%;
+  min-height: 60vh;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.35)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.hero-content h1 {
+  color: #ffffff;
+  font-size: 42px;
+  margin-top: 20px;
+}
+
+.hero-content p {
+  color: #BDF4FF;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
