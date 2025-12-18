@@ -1,1 +1,19 @@
+:root {
+  --body-color: #4FCAFF;
+  --navtext-color: #00DDFF;
+  --navbg-color: #0048FF;
+  --navtext-hover: #BDF4FF;
+  --navbg-hover: #0099C9;
+}
 
+.navbar {
+
+}
+
+.navbar a {
+
+}
+
+.navbar a:hover {
+  
+}
