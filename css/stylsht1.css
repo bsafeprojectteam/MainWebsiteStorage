@@ -6,14 +6,57 @@
   --navbg-hover: #0099C9;
 }
 
-.navbar {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+body {
+  background-color: var(--body-color);
+  min-height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  background-color: var(--navbg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 32px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .navbar a {
-
+  color: var(--navtext-color);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar a:hover {
-  
+  background-color: var(--navbg-hover);
+  color: var(--navtext-hover);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar a {
+    margin-left: 0;
+  }
 }
