@@ -17,37 +17,99 @@
 
 <main class="grid">
 
-  <section class="card">
+  <button class="card" id="modalbutton1">
     <i class="fa-solid fa-water icon"></i>
     <h2>Water Sample Analysis</h2>
     <p>Scientific analysis of water samples collected from the lake.</p>
-  </section>
+  </button>
 
-  <section class="card">
+  <button class="card" id="modalbutton2">
     <i class="fa-solid fa-filter icon"></i>
     <h2>Water Purification</h2>
     <p>Purification work performed on water taken from the lake.</p>
-  </section>
+  </button>
 
-  <section class="card center-card">
+  <button class="card" id="modalbutton3">
     <i class="fa-solid fa-leaf icon"></i>
     <h2>Environmental Cleaning</h2>
     <p>Lakeshore environmental cleaning activities.</p>
-  </section>
+  </button>
 
-  <section class="card">
+  <button class="card" id="modalbutton4">
     <i class="fa-solid fa-map-location-dot icon"></i>
     <h2>Lake Location</h2>
     <p>Karaağaç Lake</p>
-  </section>
+  </button>
 
-  <section class="card">
+  <button class="card" id="modalbutton5">
     <i class="fa-solid fa-list-check icon"></i>
     <h2>Treasure Hunt List</h2>
     <p>Educational activities and awareness-based challenges.</p>
-  </section>
+  </button>
 
 </main>
+
+  <div id="modal1" class="modal">
+    
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+  <div id="modal2" class="modal">
+    
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+    <div id="modal3" class="modal">
+    
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+    <div id="modal4" class="modal">
+    
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+    <div id="modal5" class="modal">
+    
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+  <script>
+var modal = document.getElementById("modal1");
+var btn = document.getElementById("modalbutton1");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+  </script>
 
 <footer class="footer">
   <img src="static/eTwinning.jpeg" alt="eTwinning Logo" class="footer-logo">
