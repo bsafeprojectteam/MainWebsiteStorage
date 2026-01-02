@@ -182,12 +182,27 @@ body {
   background-color: rgba(0,0,0,0.4); 
 }
 
+.modal.active {
+  display: block;
+}
+
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%; 
+}
+
+.modal-content {
+  transform: scale(0.85);
+  opacity: 0;
+  transition: .4s;
+}
+
+.modal.active .modal-content {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .close {
