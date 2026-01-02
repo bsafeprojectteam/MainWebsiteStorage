@@ -101,7 +101,6 @@ const modals = document.querySelectorAll('.modal-overlay');
 
 buttons.forEach(btn => {
   btn.addEventListener('click', e => {
-    // Ripple
     const r = document.createElement('div');
     const size = Math.max(innerWidth, innerHeight) * 2;
     r.className = 'ripple';
@@ -111,13 +110,11 @@ buttons.forEach(btn => {
     document.body.appendChild(r);
     setTimeout(() => r.remove(), 1200);
 
-    // Open modal
     const modal = document.getElementById(btn.dataset.modal);
     setTimeout(() => modal.classList.add('active'), 250);
   });
 });
 
-// Close logic
 modals.forEach(modal => {
   modal.addEventListener('click', e => {
     if (e.target.classList.contains('modal-overlay') || e.target.classList.contains('btn-close')) {
