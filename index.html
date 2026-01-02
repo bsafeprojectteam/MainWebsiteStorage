@@ -17,35 +17,35 @@
 
 <main class="grid">
 
-  <button class="card" id="modalbutton1">
-    <i class="fa-solid fa-water icon"></i>
-    <h2>Water Sample Analysis</h2>
-    <p>Scientific analysis of water samples collected from the lake.</p>
-  </button>
+<button class="card" data-modal="modal1">
+  <i class="fa-solid fa-water icon"></i>
+  <h2>Water Sample Analysis</h2>
+  <p>Scientific analysis of water samples collected from the lake.</p>
+</button>
 
-  <button class="card" id="modalbutton2">
-    <i class="fa-solid fa-filter icon"></i>
-    <h2>Water Purification</h2>
-    <p>Purification work performed on water taken from the lake.</p>
-  </button>
+<button class="card" data-modal="modal2">
+  <i class="fa-solid fa-filter icon"></i>
+  <h2>Water Purification</h2>
+  <p>Purification work performed on water taken from the lake.</p>
+</button>
 
-  <button class="card" id="modalbutton3">
-    <i class="fa-solid fa-leaf icon"></i>
-    <h2>Environmental Cleaning</h2>
-    <p>Lakeshore environmental cleaning activities.</p>
-  </button>
+<button class="card" data-modal="modal3">
+  <i class="fa-solid fa-leaf icon"></i>
+  <h2>Environmental Cleaning</h2>
+  <p>Lakeshore environmental cleaning activities.</p>
+</button>
 
-  <button class="card" id="modalbutton4">
-    <i class="fa-solid fa-map-location-dot icon"></i>
-    <h2>Lake Location</h2>
-    <p>Karaağaç Lake</p>
-  </button>
+<button class="card" data-modal="modal4">
+  <i class="fa-solid fa-map-location-dot icon"></i>
+  <h2>Lake Location</h2>
+  <p>Karaağaç Lake</p>
+</button>
 
-  <button class="card" id="modalbutton5">
-    <i class="fa-solid fa-list-check icon"></i>
-    <h2>Treasure Hunt List</h2>
-    <p>Educational activities and awareness-based challenges.</p>
-  </button>
+<button class="card" data-modal="modal5">
+  <i class="fa-solid fa-list-check icon"></i>
+  <h2>Treasure Hunt List</h2>
+  <p>Educational activities and awareness-based challenges.</p>
+</button>
 
 </main>
 
@@ -94,90 +94,26 @@
 
 </div>
 
-  <script>
-var modal = document.getElementById("modal1");
-var btn = document.getElementById("modalbutton1");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-  </script>
+<script>
+const buttons = document.querySelectorAll(".card");
+const modals = document.querySelectorAll(".modal");
 
-    <script>
-var modal = document.getElementById("modal2");
-var btn = document.getElementById("modalbutton2");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-  </script>
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const modalId = button.dataset.modal;
+    document.getElementById(modalId).style.display = "block";
+  });
+});
 
-    <script>
-var modal = document.getElementById("modal3");
-var btn = document.getElementById("modalbutton3");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-  </script>
+modals.forEach(modal => {
+  modal.addEventListener("click", e => {
+    if (e.target.classList.contains("modal") || e.target.classList.contains("close")) {
+      modal.style.display = "none";
+    }
+  });
+});
+</script>
 
-    <script>
-var modal = document.getElementById("modal4");
-var btn = document.getElementById("modalbutton4");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-  </script>
-
-    <script>
-var modal = document.getElementById("modal5");
-var btn = document.getElementById("modalbutton5");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-  </script>
 
 <footer class="footer">
   <img src="static/eTwinning.jpeg" alt="eTwinning Logo" class="footer-logo">
