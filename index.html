@@ -112,19 +112,19 @@ buttons.forEach(btn => {
     setTimeout(() => ripple.remove(), 1200);
 
     const modal = document.getElementById(btn.dataset.modal);
-    modal.style.display = 'block';
     modal.classList.add('active');
   });
+});
 
 modals.forEach(modal => {
   modal.addEventListener('click', e => {
     if (e.target.classList.contains('modal') || e.target.classList.contains('close')) {
       modal.classList.remove('active');
-      setTimeout(() => modal.style.display = 'none', 300);
     }
   });
 });
 </script>
+
 
 <footer class="footer">
   <img src="static/eTwinning.jpeg" alt="eTwinning Logo" class="footer-logo">
