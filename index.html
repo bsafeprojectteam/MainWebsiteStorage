@@ -96,24 +96,37 @@
 </div>
 
 <script>
-const buttons = document.querySelectorAll(".card");
-const modals = document.querySelectorAll(".modal");
+const buttons = document.querySelectorAll('.water-btn');
+const modals = document.querySelectorAll('.modal-overlay');
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const modalId = button.dataset.modal;
-    document.getElementById(modalId).style.display = "block";
+buttons.forEach(btn => {
+  btn.addEventListener('click', e => {
+    // Ripple
+    const r = document.createElement('div');
+    const size = Math.max(innerWidth, innerHeight) * 2;
+    r.className = 'ripple';
+    r.style.width = r.style.height = size + 'px';
+    r.style.left = e.clientX - size/2 + 'px';
+    r.style.top = e.clientY - size/2 + 'px';
+    document.body.appendChild(r);
+    setTimeout(() => r.remove(), 1200);
+
+    // Open modal
+    const modal = document.getElementById(btn.dataset.modal);
+    setTimeout(() => modal.classList.add('active'), 250);
   });
 });
 
+// Close logic
 modals.forEach(modal => {
-  modal.addEventListener("click", e => {
-    if (e.target.classList.contains("modal") || e.target.classList.contains("close")) {
-      modal.style.display = "none";
+  modal.addEventListener('click', e => {
+    if (e.target.classList.contains('modal-overlay') || e.target.classList.contains('btn-close')) {
+      modal.classList.remove('active');
     }
   });
 });
 </script>
+
 
 
 <footer class="footer">
